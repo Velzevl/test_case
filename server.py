@@ -21,7 +21,6 @@ while True:
 	data = conn.recv(1024)
 	udata = int(data.decode('utf-8'))
 	d = fib(udata)
-	print(udata-1)
 	if not data:
 		break
 	conn.send(str(d).encode('utf-8'))
